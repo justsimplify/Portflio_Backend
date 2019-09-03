@@ -1,8 +1,7 @@
-from flask import Flask
-from flask import jsonify
-from flask_cors import CORS
-from flask import send_file
 import logging
+
+from flask import Flask, jsonify, send_file
+from flask_cors import CORS
 
 NAME = "Himanshu Kumar"
 NAME_PARAM = "name"
@@ -22,6 +21,7 @@ GITHUB = "https://github.com/justsimplify"
 app = Flask(__name__)
 CORS(app)
 
+
 def getDetails():
     details = dict()
     details[NAME_PARAM] = NAME
@@ -33,13 +33,16 @@ def getDetails():
     details[GITHUB_PARAM] = GITHUB
     return details
 
+
 @app.route('/')
 def index():
     return jsonify(getDetails())
 
+
 @app.route('/getImage')
 def getProfileImage():
     return send_file(IMAGE, mimetype='image/jpg')
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

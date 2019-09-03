@@ -7,7 +7,6 @@ DESCRIPTION_PARAM = "skillSet"
 
 #Skill Names
 PROGRAMMING_LANG = "Programming Languages"
-WEB_TECH = "Web Technologies"
 FRAMEWORKS = "Frameworks / APIs"
 DB = "Database"
 CLOUD = "Cloud Services / Tools"
@@ -26,12 +25,11 @@ def createDetails(name, skillSet):
 
 def getSkillDetails():
     skillDetails = []
-    skillDetails.append(createDetails(PROGRAMMING_LANG, ['Python', 'C/C++', 'Bash', 'Java', 'Kotlin']))
-    skillDetails.append(createDetails(WEB_TECH, ['HTML', 'CSS', 'JavaScript', 'TypeScript']))
-    skillDetails.append(createDetails(FRAMEWORKS, ['MEAN', 'Django', 'Firebase', 'AWS Lex', 'Lambdas', 'Google Assistant', 'Maps and Places', 'Vue JS']))
-    skillDetails.append(createDetails(DB, ['MySQL', 'MongoDB', 'Firebase Database']))
-    skillDetails.append(createDetails(CLOUD, ['AWS', 'Docker', 'Kubernetes (Basic)', 'VMWare (Basic)']))
-    skillDetails.append(createDetails(TOOLS, ['ServiceNow (ITSM)', 'PagerDuty', 'Jenkins', 'Git']))
+    skillDetails.append(createDetails(PROGRAMMING_LANG, ['Python', 'Kotlin', 'Java']))
+    skillDetails.append(createDetails(FRAMEWORKS, ['Node.js', 'Express JS', 'React JS', 'Angular JS', 'Django', 'Flask']))
+    skillDetails.append(createDetails(DB, ['MySQL', 'MongoDB', 'Firebase Database', 'Cassandra']))
+    skillDetails.append(createDetails(CLOUD, ['AWS', 'K8s', 'Docker', 'GCP']))
+    skillDetails.append(createDetails(TOOLS, ['GIT', 'Terraform', 'Vault', 'Jenkins', 'Spinnaker']))
     skillDetails.append(createDetails(PLATFORM, ['Web', 'Android']))
     skillDetails.append(createDetails(OS, ['Mac', 'Linux']))
     return skillDetails
